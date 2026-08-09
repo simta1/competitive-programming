@@ -33,13 +33,6 @@ struct Trie {
         }
         mx = max(mx, mxqry(x));
     }
-    void erase(int x) {
-        int cur = 0;
-        for (int i = 16; i >= 0; i--) {
-            bool bit = x >> i & 1;
-            cur = tree[cur].mp[bit];
-        }
-    }
 };
 
 int main() {

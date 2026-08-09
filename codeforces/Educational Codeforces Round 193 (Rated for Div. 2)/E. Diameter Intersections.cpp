@@ -4,10 +4,10 @@ using ll = long long;
 
 namespace Poly { // FFT
 template <typename real_t>
-void fft(vector<complex<real_t> > &a) {
+void fft(vector<complex<real_t>> &a) {
     using cpx = complex<real_t>;
     int n = a.size(), L = __lg(n);
-    static vector<complex<long double> > R(2, 1);
+    static vector<complex<long double>> R(2, 1);
     static vector<cpx> rt(2, 1);
     for (static int k = 2; k < n; k *= 2) {
         R.resize(n); rt.resize(n);
@@ -30,7 +30,7 @@ void fft(vector<complex<real_t> > &a) {
     }
 }
 template <typename real_t>
-void ifft(vector<complex<real_t> > &a) {
+void ifft(vector<complex<real_t>> &a) {
     reverse(a.begin() + 1, a.end());
     fft(a);
     for (auto &e : a) e /= real_t(a.size());

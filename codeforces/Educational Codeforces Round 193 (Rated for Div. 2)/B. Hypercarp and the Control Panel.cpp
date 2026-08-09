@@ -14,7 +14,7 @@ int main() {
         for (auto &e : v) cin >> e;
 
         int ans = 0;
-        vector<pair<int, int> > a;
+        vector<pair<int, int>> a;
         for (int i = 0, j = 0; i < n; i = j) {
             while (j < n && v[i] == v[j]) ++j;
             a.emplace_back(v[i], j - i);
