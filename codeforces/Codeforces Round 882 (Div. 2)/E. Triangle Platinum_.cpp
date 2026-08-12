@@ -54,7 +54,7 @@ int main() {
             }
         }
 
-        vector<vector<int> > candi;
+        vector<vector<int>> candi;
         for (int mask = 0; mask < (1 << 2 * n); mask++) {
             vector<int> v(n + 1);
             for (int i = 0; i < n; i++) v[i + 1] = (mask >> 2 * i & 3) + 1;
