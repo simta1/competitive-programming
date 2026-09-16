@@ -18,7 +18,7 @@ int main() {
         edges[i - 1] = {u, v};
     }
 
-    vector<vector<int> > chd(n + 1);
+    vector<vector<int>> chd(n + 1);
     vector<int> sz2(n + 1, 1), dep(n + 1), p(n + 1), in(n + 1), top(n + 1);
     auto mkt = [&](auto &&mkt, int cur, int par) -> void {
         for (auto nxt : adj[cur]) if (nxt != par) {

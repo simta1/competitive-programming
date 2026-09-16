@@ -4,7 +4,7 @@ using ll = long long;
 
 auto get_cartesian(const vector<int> &v) { // min // 0-based
     int n = v.size();
-    vector<pair<int, int> > chd(n, {-1, -1});
+    vector<pair<int, int>> chd(n, {-1, -1});
     vector<int> s;
     for (int i = 0; i < n; i++) {
         while (!s.empty() && v[s.back()] > v[i]) {
