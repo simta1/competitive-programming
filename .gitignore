@@ -1,1 +1,3 @@
 .clangd
+/projecteuler/*
+!/projecteuler/*.cpp
