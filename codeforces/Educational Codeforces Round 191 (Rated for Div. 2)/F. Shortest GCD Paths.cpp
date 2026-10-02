@@ -44,7 +44,7 @@
 //         ispB[i] = ispB[i] <= 2;
 //     }
 
-//     vector<vector<pair<int, int> > > pa(ta), pb(tb), pa2(ta), pb2(tb);
+//     vector<vector<pair<int, int>>> pa(ta), pb(tb), pa2(ta), pb2(tb);
 //     for (int i = 0; i < ta; i++) {
 //         for (int j = 0; j <= i; j++) {
 //             if (da[i] % da[j] == 0) {
@@ -138,7 +138,7 @@ int main() {
         ispB[i] = ispB[i] <= 2;
     }
 
-    vector<vector<pair<int, int> > > pa(ta), pb(tb), pa2(ta), pb2(tb);
+    vector<vector<pair<int, int>>> pa(ta), pb(tb), pa2(ta), pb2(tb);
     for (int i = 0; i < ta; i++) {
         for (int j = 0; j <= i; j++) {
             if (da[i] % da[j] == 0) {

@@ -28,7 +28,7 @@ int main() {
             return true;
         };
 
-        vector<vector<pair<int, int> > > poss(comp.size());
+        vector<vector<pair<int, int>> > poss(comp.size());
         for (int i = 0, j = 1; i < n; i = j) {
             while (j < n && v[i] == v[j]) ++j;
             poss[v[i]].emplace_back(i, j - 1);

@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-pair<int, vector<int> > getSCC(int n, const vector<vector<int> > &adj) {
+pair<int, vector<int>> getSCC(int n, const vector<vector<int>> &adj) {
     vector<int> dfsn(n), sccn(n, -1);
     vector<int> s(n);
     int top = 0, dfsi = 0, scci = 0;
@@ -70,7 +70,7 @@ int main() {
             }
 
             auto [scci, sccn] = getSCC(n + m, adj);
-            vector<vector<int> > sccs(scci);
+            vector<vector<int>> sccs(scci);
             for (int i = 0; i < n + m; i++) sccs[sccn[i]].push_back(i);
 
             vector<bool> dp(scci);

@@ -11,7 +11,7 @@ int main() {
         cin >> n;
 
         int lg = __lg(2 * n + 1);
-        vector<pair<int, string> > v(lg);
+        vector<pair<int, string>> v(lg);
         for (auto &[cnt, st] : v) {
             cin >> st;
             cnt = 0;
