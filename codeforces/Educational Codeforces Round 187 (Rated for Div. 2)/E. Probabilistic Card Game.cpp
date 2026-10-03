@@ -25,27 +25,27 @@ struct Seg {
     int sz;
     vector<T> tree;
     Seg(int n) {
-	sz = 1;
-	while (sz < n) sz <<= 1;
-	tree.resize(sz << 1);
+        sz = 1;
+        while (sz < n) sz <<= 1;
+        tree.resize(sz << 1);
     }
     void update(int i, T add) { // 0-based
-	tree[i |= sz] += add;
-	while (i >>= 1) tree[i] += add;
+        tree[i |= sz] += add;
+        while (i >>= 1) tree[i] += add;
     }
     T query(int l, int r) { // 0-based
-	T res = 0;
-	for (l |= sz, r |= sz; l <= r; l >>= 1, r >>= 1) {
-	    if (l & 1) res += tree[l++];
-	    if (~r & 1) res += tree[r--];
-	}
-	return res;
+        T res = 0;
+        for (l |= sz, r |= sz; l <= r; l >>= 1, r >>= 1) {
+            if (l & 1) res += tree[l++];
+            if (~r & 1) res += tree[r--];
+        }
+        return res;
     }
     int findKth(int node, int s, int e, T k) { // k만 1-based
-	if (s == e) return s; // 0-based
-	int m = s + e >> 1;
-	if (tree[node << 1] >= k) return findKth(node << 1, s, m, k);
-	return findKth(node << 1 | 1, m + 1, e, k - tree[node << 1]);
+        if (s == e) return s; // 0-based
+        int m = s + e >> 1;
+        if (tree[node << 1] >= k) return findKth(node << 1, s, m, k);
+        return findKth(node << 1 | 1, m + 1, e, k - tree[node << 1]);
     }
 };
 

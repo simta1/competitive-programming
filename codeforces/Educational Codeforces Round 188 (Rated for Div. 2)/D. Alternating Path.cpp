@@ -10,7 +10,7 @@ int main() {
         int n, m;
         cin >> n >> m;
 
-        vector<vector<int> > adj(n + 1);
+        vector<vector<int>> adj(n + 1);
         while (m--) {
             int u, v;
             cin >> u >> v;
