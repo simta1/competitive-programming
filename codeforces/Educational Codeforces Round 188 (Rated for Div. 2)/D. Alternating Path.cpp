@@ -31,13 +31,13 @@ int main() {
                 q.pop();
                 ++cnt[visited[cur] - 1];
 
-                for (auto next : adj[cur]) {
-                    if (!visited[next]) {
-                        visited[next] = 3 - visited[cur];
-                        q.push(next);
+                for (auto nxt : adj[cur]) {
+                    if (!visited[nxt]) {
+                        visited[nxt] = 3 - visited[cur];
+                        q.push(nxt);
                     }
                     else {
-                        if (visited[next] == visited[cur]) flag = false;
+                        if (visited[nxt] == visited[cur]) flag = false;
                     }
                 }
             }
