@@ -92,7 +92,7 @@ int main() {
     auto h1 = getConvexHull(a);
     auto h2 = getConvexHull(b);
 
-    int ans = w * h - polygonArea2(convexIntersection(h1, h2)) / 2;
+    int ans = w * h - polygonArea2(convexIntersection(h1, h2)) / 2 + 1e-9;
     cout << ans;
 
     return 0;

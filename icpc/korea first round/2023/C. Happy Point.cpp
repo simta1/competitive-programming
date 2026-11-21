@@ -15,9 +15,14 @@ int main() {
         if (g.find(ch) != string::npos) ++pg;
     }
 
-    cout << fixed << setprecision(2);
-    if (!ph && !pg) cout << 50.0;
-    else cout << ph / double(ph + pg) * 100;
+	cout << setfill('0');
+    if (!ph && !pg) cout << "50.00";
+    else {
+		ll a = ph * 10000;
+		ll b = ph + pg;
+		ll ans = (a + b / 2) / b;
+		cout << ans / 100 << "." << setw(2) << ans % 100;
+	}
 
     return 0;
 }
